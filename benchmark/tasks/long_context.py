@@ -7,7 +7,7 @@ from ..utils import normalize_answer
 
 class LongContextQATask:
     """
-    Given the “slinusc/ContextStretchQA” dataset, this Task lets you sample
+    Given the “ContextStretchQA” dataset, this Task lets you sample
     a specified number of examples from each context_range bucket
     ("3k", "4k", "8k", "16k", "32k"). The generate_prompts(...) method takes
       - num_samples_per_level: how many examples to return from each bucket
