@@ -1,7 +1,7 @@
 # RQ1: Memory-Constrained Deployment (24GB VRAM Budget)
 # Compares FP16 baselines vs larger quantized models within same memory constraints
 # Backend: vLLM only
-# Run on each GPU separately: CUDA_VISIBLE_DEVICES=0 python launch_benchmark.py config_rq1_memory_constrained.yaml
+# Run on each GPU separately, python launch_benchmark.py config_rq1_memory_constrained.yaml
 
 backend: vllm
 
@@ -31,11 +31,11 @@ hf_model:
     top_p: 0.9
     max_tokens: 128
     temperature: 0.1
-  - name: Qwen/Qwen2.5-14B-Instruct-GPTQ-Int8  # INT8 quantized (verify model name)
+  - name: Qwen/Qwen2.5-14B-Instruct-GPTQ-Int8  # INT8
     top_p: 0.9
     max_tokens: 128
     temperature: 0.1
-  - name: Qwen/Qwen2.5-32B-Instruct-GPTQ-Int4  # INT4 quantized (verify model name)
+  - name: Qwen/Qwen2.5-32B-Instruct-GPTQ-Int4  # INT4
     top_p: 0.9
     max_tokens: 128
     temperature: 0.1
